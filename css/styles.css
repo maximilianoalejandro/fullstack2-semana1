@@ -1,0 +1,106 @@
+/* ============================================================
+   MediCare - Estilos del sitio
+   Centro de consultas médicas y reserva de horas.
+   ============================================================ */
+
+/* Variables de color y estilo del sitio. */
+:root {
+  --verde: #0b6b5f;
+  --verde-medio: #159b86;
+  --cian: #2bb3c0;
+  --acento: #ff7a59;
+  --fondo: #f3f8f8;
+  --texto: #28403c;
+  --blanco: #ffffff;
+  --borde: #d7e7e4;
+  --radio: 18px;
+  --sombra: 0 14px 34px rgba(11,107,95,.12);
+}
+
+/* Estilos base. */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--fondo); color: var(--texto); font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
+a { color: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+a:focus-visible { outline: 3px solid var(--acento); outline-offset: 4px; }
+
+/* Encabezado: marca y navegación. */
+.encabezado { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 12px max(5vw,20px); background: var(--blanco); border-bottom: 1px solid var(--borde); }
+.marca { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-size: 26px; font-weight: 800; color: var(--verde); white-space: nowrap; }
+.marca-logo { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg,var(--verde),var(--cian)); color: #fff; font-size: 24px; }
+.marca-acento { color: var(--acento); }
+.navegacion { display: flex; gap: 18px; flex-wrap: wrap; }
+.navegacion a { font-size: 14px; font-weight: 700; color: var(--verde); text-decoration: none; border-bottom: 2px solid transparent; transition: border-color .2s, color .2s; }
+.navegacion a:hover { color: var(--verde-medio); border-color: var(--acento); }
+
+/* Sección principal de bienvenida. */
+.hero { min-height: 390px; background: linear-gradient(115deg,#0b6b5f,#2bb3c0); color: var(--blanco); display: grid; grid-template-columns: 1.5fr .7fr; align-items: center; gap: 50px; padding: 52px max(5vw,20px); }
+.hero-texto { max-width: 760px; animation: aparecer 750ms ease both; }
+.hero h1 { margin: 8px 0 15px; font-size: clamp(33px,4.7vw,60px); line-height: 1.08; }
+.hero p { max-width: 660px; margin-bottom: 28px; font-size: 18px; color: #e6fbf7; }
+.hero-figura { justify-self: center; width: min(260px,100%); aspect-ratio: 1; display: grid; place-items: center; font-size: 120px; border-radius: 50%; background: var(--blanco); color: var(--verde); animation: flotar 4s ease-in-out infinite; }
+.etiqueta { display: inline-block; color: var(--verde-medio); font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.hero .etiqueta { color: #ffe3d9; }
+.boton { display: inline-flex; width: fit-content; padding: 10px 17px; border-radius: 12px; background: var(--verde); color: white; text-decoration: none; font-weight: 700; transition: background-color .2s, transform .2s; }
+.boton:hover { background: var(--verde-medio); transform: translateY(-2px); }
+.boton-claro { background: var(--acento); color: #3a1206; animation: pulso 2.8s ease-in-out infinite; }
+.boton-claro:hover { background: #ff9b82; }
+
+/* Grillas de especialidades y servicios. */
+.contenido { max-width: 1260px; margin: auto; padding: 56px 24px 70px; }
+.seccion-encabezado { margin-bottom: 27px; }
+.seccion-encabezado h2 { margin: 4px 0 0; color: var(--verde); font-size: clamp(26px,3.4vw,36px); }
+.rejilla-categorias { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 22px; }
+.rejilla-servicios { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.tarjeta { overflow: hidden; background: white; border: 1px solid var(--borde); border-radius: var(--radio); box-shadow: var(--sombra); animation: subir 650ms ease both; }
+.tarjeta:nth-child(2) { animation-delay: .08s; }
+.tarjeta:nth-child(3) { animation-delay: .16s; }
+.tarjeta:nth-child(4) { animation-delay: .24s; }
+
+/* Bloque de color con ícono para las tarjetas. */
+.tarjeta img { width: 100%; height: 184px; object-fit: cover; }
+.media { height: 184px; display: grid; place-items: center; font-size: 72px; color: var(--blanco); background: linear-gradient(135deg,var(--verde-medio),var(--cian)); }
+.media.v2 { background: linear-gradient(135deg,#2bb3c0,#6fcf97); }
+.media.v3 { background: linear-gradient(135deg,#0b6b5f,#159b86); }
+.media.v4 { background: linear-gradient(135deg,#159b86,#2bb3c0); }
+
+.tarjeta-contenido { padding: 20px; }
+.tarjeta h3 { color: var(--verde); margin: 4px 0 8px; font-size: 21px; }
+.tarjeta p { margin: 0 0 18px; }
+.precio { color: var(--verde); font-size: 24px; font-weight: 800; }
+.descuento,.sin-descuento { display: inline-block; padding: 4px 10px; border-radius: 50px; font-size: 12px; font-weight: 700; }
+.descuento { background: #e3f6ef; color: #0f5a3c; }
+.sin-descuento { background: #eef3f6; color: #455766; }
+.subhero { background: #e2f2ef; padding: 42px max(5vw,20px); }
+.subhero h1 { font-size: 39px; color: var(--verde); margin: 8px 0; }
+.volver { display: block; width: fit-content; color: var(--verde-medio); font-weight: 700; margin-bottom: 15px; text-decoration: none; }
+.volver:hover { text-decoration: underline; }
+.pie { padding: 24px 5vw; background: var(--verde); color: #e2f6f2; text-align: center; font-size: 13px; }
+.pie p { margin: 2px 0; }
+
+/* Animaciones del sitio. */
+@keyframes aparecer { from {opacity:0;} to {opacity:1;} }
+@keyframes subir { from {opacity:0;transform:translateY(18px);} to {opacity:1;transform:translateY(0);} }
+@keyframes flotar { 0%,100% {transform:translateY(0);} 50% {transform:translateY(-12px);} }
+@keyframes pulso { 0%,100% {box-shadow:0 0 0 0 rgba(255,122,89,.5);} 50% {box-shadow:0 0 0 13px rgba(255,122,89,0);} }
+
+/* Responsividad para tablet y móvil. */
+@media (max-width: 980px) {
+  .encabezado { flex-direction: column; align-items: flex-start; }
+  .rejilla-categorias { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .rejilla-servicios { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .hero { grid-template-columns: 1fr .6fr; }
+}
+@media (max-width: 620px) {
+  .hero { grid-template-columns: 1fr; padding-block: 32px; }
+  .hero-figura { width: 140px; font-size: 70px; }
+  .navegacion { gap: 11px; }
+  .rejilla-categorias,.rejilla-servicios { grid-template-columns: 1fr; }
+  .contenido { padding: 35px 17px; }
+  .subhero h1 { font-size: 30px; }
+}
+/* Reduce el movimiento si el sistema lo pide. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

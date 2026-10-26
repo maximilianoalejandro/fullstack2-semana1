@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MediCare: servicios de Medicina General y reserva de horas.">
+  <title>MediCare | Medicina General</title>
+  <!-- Estilos del sitio -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header class="encabezado">
+    <a class="marca" href="index.html" aria-label="Ir al inicio de MediCare">
+      <span class="marca-logo" aria-hidden="true">🏥</span>
+      <span>Medi<span class="marca-acento">Care</span></span>
+    </a>
+    <nav class="navegacion" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="medicina-general.html">Medicina General</a>
+        <a href="pediatria.html">Pediatría</a>
+        <a href="dental.html">Dental</a>
+        <a href="kinesiologia.html">Kinesiología</a>
+    </nav>
+  </header>
+  <main id="contenido">
+    <section class="subhero">
+      <a class="volver" href="index.html">← Volver a todas las especialidades</a>
+      <span class="etiqueta">Especialidades / Medicina General</span>
+      <h1>Medicina General</h1><p>Atención integral para toda la familia.</p>
+    </section>
+    <section class="contenido" aria-label="Servicios de Medicina General">
+      <!-- Servicios de la especialidad -->
+      <div class="rejilla-servicios">
+      <!-- Servicio -->
+      <article class="tarjeta servicio">
+        <div class="media" aria-hidden="true">🩺</div>
+        <div class="tarjeta-contenido">
+          <span class="descuento">Con descuento</span><h3>Consulta General</h3><p>Evaluación médica completa con diagnóstico y receta.</p>
+          <p class="precio">$18.990</p>
+        </div>
+      </article>
+      <!-- Servicio -->
+      <article class="tarjeta servicio">
+        <div class="media" aria-hidden="true">💉</div>
+        <div class="tarjeta-contenido">
+          <span class="sin-descuento">Sin descuento</span><h3>Control de Presión</h3><p>Chequeo y seguimiento de hipertensión arterial.</p>
+          <p class="precio">$12.990</p>
+        </div>
+      </article>
+      <!-- Servicio -->
+      <article class="tarjeta servicio">
+        <div class="media" aria-hidden="true">🧪</div>
+        <div class="tarjeta-contenido">
+          <span class="descuento">Con descuento</span><h3>Exámenes Preventivos</h3><p>Panel de laboratorio básico con interpretación médica.</p>
+          <p class="precio">$24.990</p>
+        </div>
+      </article>
+      </div>
+    </section>
+  </main>
+  <footer class="pie">
+    <p>MediCare · Proyecto académico · Full Stack II</p>
+    <p>Centro ficticio: precios y convenios solo con fines educativos.</p>
+  </footer>
+</body>
+</html>

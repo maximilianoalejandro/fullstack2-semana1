@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MediCare: centro médico con reserva de horas por especialidad.">
+  <title>MediCare | Centro de consultas médicas</title>
+  <!-- Estilos del sitio -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header class="encabezado">
+    <a class="marca" href="index.html" aria-label="Ir al inicio de MediCare">
+      <span class="marca-logo" aria-hidden="true">🏥</span>
+      <span>Medi<span class="marca-acento">Care</span></span>
+    </a>
+    <nav class="navegacion" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="medicina-general.html">Medicina General</a>
+        <a href="pediatria.html">Pediatría</a>
+        <a href="dental.html">Dental</a>
+        <a href="kinesiologia.html">Kinesiología</a>
+    </nav>
+  </header>
+  <main id="contenido">
+    <!-- Bienvenida -->
+    <section class="hero" aria-labelledby="titulo-principal">
+      <div class="hero-texto">
+        <span class="etiqueta">Tu salud en buenas manos</span>
+        <h1 id="titulo-principal">Reserva tu hora médica en minutos.</h1>
+        <p>En MediCare conectamos a pacientes con especialistas. Medicina general, pediatría, dental y kinesiología en un mismo lugar.</p>
+        <a class="boton boton-claro" href="#especialidades">Ver especialidades →</a>
+      </div>
+      <div class="hero-figura" aria-hidden="true">🏥</div>
+    </section>
+    <!-- Especialidades disponibles -->
+    <section class="contenido" id="especialidades" aria-labelledby="titulo-especialidades">
+      <div class="seccion-encabezado"><span class="etiqueta">Nuestras especialidades</span><h2 id="titulo-especialidades">Elige tu especialidad</h2></div>
+      <div class="rejilla-categorias">
+      <!-- Especialidad -->
+      <article class="tarjeta categoria">
+        <img src="img/medicina-general.jpg" alt="Especialidad Medicina General" loading="lazy">
+        <div class="tarjeta-contenido">
+          <h3>Medicina General</h3><p>Atención integral para toda la familia.</p>
+          <a class="boton" href="medicina-general.html">Ver servicios →</a>
+        </div>
+      </article>
+      <!-- Especialidad -->
+      <article class="tarjeta categoria">
+        <img src="img/pediatria.jpg" alt="Especialidad Pediatría" loading="lazy">
+        <div class="tarjeta-contenido">
+          <h3>Pediatría</h3><p>Cuidado especializado para los más pequeños.</p>
+          <a class="boton" href="pediatria.html">Ver servicios →</a>
+        </div>
+      </article>
+      <!-- Especialidad -->
+      <article class="tarjeta categoria">
+        <img src="img/dental.jpg" alt="Especialidad Dental" loading="lazy">
+        <div class="tarjeta-contenido">
+          <h3>Dental</h3><p>Sonrisas sanas con atención profesional.</p>
+          <a class="boton" href="dental.html">Ver servicios →</a>
+        </div>
+      </article>
+      <!-- Especialidad -->
+      <article class="tarjeta categoria">
+        <img src="img/kinesiologia.jpg" alt="Especialidad Kinesiología" loading="lazy">
+        <div class="tarjeta-contenido">
+          <h3>Kinesiología</h3><p>Recupera tu movilidad y bienestar físico.</p>
+          <a class="boton" href="kinesiologia.html">Ver servicios →</a>
+        </div>
+      </article>
+      </div>
+    </section>
+  </main>
+  <footer class="pie">
+    <p>MediCare · Proyecto académico · Full Stack II</p>
+    <p>Centro ficticio: precios y convenios solo con fines educativos.</p>
+  </footer>
+</body>
+</html>
